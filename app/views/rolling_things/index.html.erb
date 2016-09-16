@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rolling Things</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Speed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rolling_things.each do |rolling_thing| %>
+      <tr>
+        <td><%= rolling_thing.name %></td>
+        <td><%= rolling_thing.speed %></td>
+        <td><%= link_to 'Show', rolling_thing %></td>
+        <td><%= link_to 'Edit', edit_rolling_thing_path(rolling_thing) %></td>
+        <td><%= link_to 'Destroy', rolling_thing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rolling Thing', new_rolling_thing_path %>

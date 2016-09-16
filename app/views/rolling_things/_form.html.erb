@@ -1,0 +1,27 @@
+<%= form_for(rolling_thing) do |f| %>
+  <% if rolling_thing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rolling_thing.errors.count, "error") %> prohibited this rolling_thing from being saved:</h2>
+
+      <ul>
+      <% rolling_thing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :speed %>
+    <%= f.text_field :speed %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

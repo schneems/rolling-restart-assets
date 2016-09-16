@@ -1,0 +1,1 @@
+json.array! @rolling_things, partial: 'rolling_things/rolling_thing', as: :rolling_thing

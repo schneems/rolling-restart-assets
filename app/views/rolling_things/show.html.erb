@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @rolling_thing.name %>
+</p>
+
+<p>
+  <strong>Speed:</strong>
+  <%= @rolling_thing.speed %>
+</p>
+
+<%= link_to 'Edit', edit_rolling_thing_path(@rolling_thing) %> |
+<%= link_to 'Back', rolling_things_path %>

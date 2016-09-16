@@ -1,0 +1,2 @@
+class RollingThing < ApplicationRecord
+end

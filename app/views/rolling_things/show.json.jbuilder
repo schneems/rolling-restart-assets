@@ -1,0 +1,1 @@
+json.partial! "rolling_things/rolling_thing", rolling_thing: @rolling_thing
