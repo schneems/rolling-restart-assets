@@ -85,4 +85,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_controller.asset_host = ENV['FASTLY_CDN_URL']
+  config.static_cache_control = 'public, s-maxage=2592000, max-age=86400'
+
 end
